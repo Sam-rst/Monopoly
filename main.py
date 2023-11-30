@@ -47,33 +47,22 @@ try:
     game.start()
     print(game.joueurCourant)
     
-    game.joueurCourant.acheterPropriete(terrainChampsElysees, game.banque)
-    
+    game.pairDeDes.roll()
+    print(game.pairDeDes)
+
     game.joueurCourant.acheterPropriete(compagnieElectricite, game.banque)
-    game.joueurCourant.acheterPropriete(terrainChampsElysees, game.banque)
-    
+    game.joueurCourant.acheterPropriete(compagnieEau, game.banque)
     game.joueurCourant.acheterPropriete(gareDeLyon, game.banque)
     
+    
+    game.joueurSuivant()
+
     game.pairDeDes.roll()
+    print(game.pairDeDes)
+    
     print(compagnieElectricite.calculerLoyer(game))
     
-    game.pairDeDes.roll()
-    print(compagnieEau.calculerLoyer(game))
-    
-    game.joueurSuivant()
-    print(gareDuNord.calculerLoyer())
-    print(gareDeLyon.calculerLoyer())
-    print(terrainChampsElysees.calculerLoyer())
-    
-    game.joueurSuivant()
-    game.joueurCourant.acheterPropriete(gareDuNord, game.banque)
-    game.joueurCourant.acheterPropriete(gareSaintLazare, game.banque)
-    game.joueurCourant.acheterPropriete(gareMontParnasse, game.banque)
-    
-    game.joueurSuivant()
-    print(gareSaintLazare.calculerLoyer())
-    print(gareDuNord.calculerLoyer())
-    print(gareMontParnasse.calculerLoyer())
+
     
 except ValueError as e:
     print("ATTENTION : ", e)

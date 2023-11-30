@@ -13,5 +13,7 @@ class CompagnieEE(Propriete):
             return f"Le loyer {self.titre} coute {CompagnieEE.loyerParCompagnie[0]}€"
         else:
             nbrCompagnies = self.leQuartier.combienDeProprieteDuQuartierPossedeCeJoueur(self.proprietaire)
-            resultat = game.pairDeDes.count() * CompagnieEE.prixParCompagnie[nbrCompagnies]
+            
+            # Ici loyerParCompagnie 
+            resultat = game.pairDeDes.count() * CompagnieEE.loyerParCompagnie[nbrCompagnies]
             return f"Le loyer {self.titre} coute {resultat}€"
