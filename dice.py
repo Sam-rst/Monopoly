@@ -69,6 +69,9 @@ class PairOfDice:
     def isDouble():
         return PairOfDice.dice1.value == PairOfDice.dice2.value
     
+    def count(self):
+        return PairOfDice.dice1.value + PairOfDice.dice2.value
+    
 if __name__ == "__main__":
     pairDeDes = PairOfDice.getInstance()
     pairDeDes.roll()

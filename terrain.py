@@ -25,4 +25,5 @@ class Terrain(Propriete):
         self._nbrMaisons = value
 
     def calculerLoyer(self):
-        return self.loyers[self.nbrMaisons]
+        resultat = self.loyers[self.nbrMaisons]
+        return f"Le loyer {self.titre} coute {resultat}€"

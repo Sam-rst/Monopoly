@@ -45,6 +45,7 @@ class Joueur:
     def acheterPropriete(self, propriete : object, leVendeur) -> None:
         self.lesProprietes.append(propriete)
         propriete.acheteePar(self)
+        print(f"\n {propriete.titre} a été achetée par {self.pseudo} à la {leVendeur} \n")
         
     def vendre(self, propriete) -> None:
         self.lesProprietes.pop(self.rechercherProprieteID(propriete))

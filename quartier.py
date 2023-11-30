@@ -46,7 +46,7 @@ class Quartier:
         """Je suis un super commentaire"""
         nbProprietes = 0
         for propriete in self.lesProprietes:
-            if propriete.joueur == joueur:
+            if propriete.proprietaire == joueur:
                 nbProprietes += 1
         return nbProprietes
     
